@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BoekhoudenDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="formAddJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAddJournal.Designer.cs">
+      <DependentUpon>formAddJournal.cs</DependentUpon>
+    </Compile>
     <Compile Include="formBalans.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formAddJournal.resx">
+      <DependentUpon>formAddJournal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formBalans.resx">
       <DependentUpon>formBalans.cs</DependentUpon>
     </EmbeddedResource>

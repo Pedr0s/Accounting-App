@@ -32,5 +32,10 @@ namespace Accounting_App
             b.Show();
 
         }
+
+        private void btnJournal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,11 +35,11 @@ namespace DataLayer
             using (BalansContext context = new BalansContext())
             {
 
-                Passiva.Add("Eigenvermogen", 0);
+                Passiva.Add("Eigenvermogen", -1);
                 foreach (EigenVermogen EigenVermogen  in context.EigenVermogen) {Passiva.Add(EigenVermogen.Name, EigenVermogen.Value);}
-                Passiva.Add("Langvreemdvermogen", 0);
+                Passiva.Add("Langvreemdvermogen", -1);
                 foreach (LangVreemdVermogen LangVreemdVermogen in context.LangVreemdVermogen) {Passiva.Add(LangVreemdVermogen.Name, LangVreemdVermogen.Value); }
-                Passiva.Add("Kortvreemdvermogen", 0);
+                Passiva.Add("Kortvreemdvermogen", -1);
                 foreach (KortVreemdVermogen KortVreemdVermogen in context.KortVreemdVermogen) {Passiva.Add(KortVreemdVermogen.Name, KortVreemdVermogen.Value); }
             }
             return Passiva;
@@ -49,10 +49,9 @@ namespace DataLayer
             Dictionary<string, int> Activa = new Dictionary<string, int>();
             using (BalansContext context = new BalansContext())
             {
-
-                Activa.Add("Vaste activa", 0);
+                Activa.Add("Vaste activa", -1);
                 foreach (VasteActiva VasteActiva in context.VasteActiva) { Activa.Add(VasteActiva.Name, VasteActiva.Value); }
-                Activa.Add("Vlottende activa", 0);
+                Activa.Add("Vlottende activa", -1);
                 foreach (VlottendeActiva VlottendeActiva in context.VlottendeActiva) { Activa.Add(VlottendeActiva.Name, VlottendeActiva.Value); }
             }
             return Activa;
